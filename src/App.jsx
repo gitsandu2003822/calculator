@@ -8,12 +8,14 @@ function App(){
 
   const handleClick = (value) =>{
 
-    if(value)
+    if(value === 'C'){
+
+    }
 
   };
 
 
-}
+
 
 
 
