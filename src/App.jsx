@@ -10,6 +10,21 @@ function App(){
 
     if(value === 'C'){
 
+      setInput(input.slice(0,-1));
+    }
+    else if(value === 'Clear'){
+
+      setInput('');
+    }
+    else if(value === '='){
+
+      setInput(eval(input).toString());
+
+    }
+    else{
+
+      setInput(input + value);
+
     }
 
   };
@@ -28,7 +43,7 @@ function App(){
 
         <div className="keypad">
           <button type="button" className="span-two" onClick={() => handleClick('Clear')}>Clear</button>
-          <button type="button" onClick={() => handleClick('C')}></button>
+          <button type="button" onClick={() => handleClick('C')}>C</button>
           <button type="button" onClick={() => handleClick('/')}>/</button>
           <button type="button" onClick={() => handleClick('7')}>7</button>
           <button type="button" onClick={() => handleClick('8')}>8</button>
